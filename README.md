@@ -4,8 +4,8 @@ The “id” column is present in both tables and should be used for matching. T
 
 Four main points:
 1. Data preprocessing
-  : - Missing data
-  : - Noisy data
+  > - Missing data
+  > - Noisy data
 2. Data transformation
   > - Atribute selection
 3. Model selection
