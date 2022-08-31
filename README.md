@@ -12,3 +12,7 @@ Four main points:
   - Logistic regression
   - Random forest
   - Linear support vector machine
+4. Models evaluation
+  - Confusion matrix
+  - Accuracy
+  - Plotting
