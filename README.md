@@ -4,14 +4,14 @@ The “id” column is present in both tables and should be used for matching. T
 
 Four main points:
 1. Data preprocessing
-  - Missing data
-  - Noisy data
+  > - Missing data
+  > - Noisy data
 2. Data transformation
-  - Atribute selection
+  > - Atribute selection
 3. Model selection
-  - Logistic regression
-  - Random forest
-  - Linear support vector machine
+  > - Logistic regression
+  > - Random forest
+  > - Linear support vector machine
 4. Models evaluation
   > - Confusion matrix
   > - Accuracy
