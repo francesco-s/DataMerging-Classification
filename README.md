@@ -43,7 +43,7 @@ The “id” column is present in both tables and should be used for matching.
 
 ## Running the Code
 
-1. Install the required dependencies listed in `requirements.txt` using pip:
+1. Install the required dependencies using pip:
   ```
   pip install pandas scikit-learn matplotlib
   ```
