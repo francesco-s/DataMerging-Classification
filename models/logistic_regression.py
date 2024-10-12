@@ -1,6 +1,7 @@
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.model_selection import cross_val_predict
+from sklearn.preprocessing import StandardScaler
 
 
 def log_regression(X_train, y_train, X_test, y_test):
@@ -20,6 +21,12 @@ def log_regression(X_train, y_train, X_test, y_test):
 
 def log_regression_cv(X, y, cv):
     """ Logistic Regression with Cross-Validation """
+
+    # Standardize the data
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
     lr = LogisticRegression(C=100.0, random_state=1, solver='lbfgs', max_iter=4000)
-    lr_predict = cross_val_predict(lr, X, y, cv=cv)
+
+    lr_predict = cross_val_predict(lr, X_scaled, y, cv=cv)
     return lr_predict

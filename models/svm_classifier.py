@@ -1,6 +1,7 @@
 from sklearn import svm
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.model_selection import cross_val_predict
+from sklearn.preprocessing import StandardScaler
 
 
 def svm_classifier(X_train, y_train, X_test, y_test):
@@ -19,7 +20,13 @@ def svm_classifier(X_train, y_train, X_test, y_test):
 
 
 def svm_classifier_cv(X, y, cv):
-    """ Linear SVM with Cross-Validation """
+    """ Linear SVM with Cross-Validation and Standardization """
+
+    # Standardize the data
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
     clf = svm.SVC(kernel='linear')
-    svm_predict = cross_val_predict(clf, X, y, cv=cv)
+
+    svm_predict = cross_val_predict(clf, X_scaled, y, cv=cv)
     return svm_predict

@@ -69,4 +69,7 @@ if __name__ == '__main__':
 
     # Step 7: Plot F1-Scores for comparison
     print("Plotting F1-Scores...")
-    plot_f1_scores(y, [lr_pred, rf_pred, svm_pred], ['Logistic Regression', 'Random Forest', 'SVM'])
+    plot_f1_scores(y,
+                   {'Logistic Regression': lr_pred,
+                    'Random Forest': rf_pred,
+                    'SVM': svm_pred})
