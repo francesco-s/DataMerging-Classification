@@ -1,4 +1,4 @@
-# Comprehensive Binary Classification with Datasets Merging
+# Blind Binary Classification: ML Model Development & Evaluation
 
 This project involves building and evaluating machine learning models for a binary classification problem. The dataset used is split into two parts, `Training_part1.csv` and `Training_part2.csv`, which are merged to create a complete training dataset.
 
